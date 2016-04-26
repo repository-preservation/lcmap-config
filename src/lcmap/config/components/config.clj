@@ -1,12 +1,13 @@
 (ns ^{:doc
-  "Config LCMAP REST Service system component
+  "Config component of the LCMAP configuration system
 
   For more information, see the module-level code comments in
-  ``lcmap.rest.components``."}
-  lcmap.rest.components.config
+  ``lcmap.config.components`` and ``lcmap.*.components`` in other LCMAP
+  projects."}
+  lcmap.config.components.config
   (:require [clojure.tools.logging :as log]
             [com.stuartsierra.component :as component]
-            [lcmap.rest.config :as config]))
+            [lcmap.config :as config]))
 
 (defrecord Configuration []
   component/Lifecycle

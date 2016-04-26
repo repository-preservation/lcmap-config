@@ -1,14 +1,6 @@
 (ns ^{:doc
-  "LCMAP REST server configuration
-
-  The LCMAP REST server will extract configuration values from the following,
-  in order of highest precedence to lowest:
-
-  * System evnironment variables
-  * The 'LCMAP Server' section of the config/INI file in ~/.usgs/lcmap.ini
-    (same file as used by the LCMAP client libraries)
-  * The values nested under the project.clj file's :env key"}
-  lcmap.rest.config
+  "LCMAP REST configuration"}
+  lcmap.config
   (:require [clojure.core.memoize :as memo]
             [clojure.string :as string]
             [clojure.tools.logging :as log]

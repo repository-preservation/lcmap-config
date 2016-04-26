@@ -1,5 +1,5 @@
 (ns ^{:doc
-  "LCMAP REST Service system components
+  "LCMAP REST configuration components
 
   Large applications often consist of many stateful processes which must be
   started and stopped in a particular order. The component model makes
@@ -38,50 +38,15 @@
   lcmap.rest.components
   (:require [clojure.tools.logging :as log]
             [com.stuartsierra.component :as component]
-            [lcmap.rest.components.config :as config]
-            [lcmap.rest.components.db :as rest-db]
-            [lcmap.rest.components.httpd :as httpd]
-            [lcmap.rest.components.logger :as logger]
-            [lcmap.rest.components.metrics :as metrics]
-            [lcmap.rest.components.system :as system]
-            [lcmap.see.components.db :as see-db]
-            [lcmap.see.components.eventd :as eventd]))
+            [lcmap.config.components.config :as config]
+            [lcmap.config.components.system :as system]))
 
 (defn init [app]
   (component/system-map
     :cfg (config/new-configuration)
-    :logger (component/using
-              (logger/new-logger)
-              [:cfg])
-    :metrics (component/using
-               (metrics/new-metrics)
-               [:cfg])
-    :jobdb (component/using
-             (see-db/new-job-client)
-             [:cfg
-              :logger])
-    :tiledb (component/using
-             (rest-db/new-tile-client)
-              [:cfg
-               :logger])
-    :eventd (component/using
-              (eventd/new-event-server)
-              [:cfg
-               :logger])
-    :httpd (component/using
-             (httpd/new-server app)
-             [:cfg
-              :logger
-              :jobdb
-              :tiledb
-              :eventd])
     :sys (component/using
            (system/new-lcmap-toplevel)
-           [:cfg
-            :logger
-            :jobdb
-            :eventd
-            :httpd])))
+           [:cfg])))
 
 (defn stop [system component-key]
   (let [updated-component (component/stop (component-key system))]
