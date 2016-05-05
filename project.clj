@@ -24,4 +24,8 @@
   :plugins [[lein-ring "0.9.7"]
             [lein-pprint "1.1.1"]
             [lein-codox "0.9.1"]
-            [lein-simpleton "1.3.0"]])
+            [lein-simpleton "1.3.0"]]
+  :profiles {
+    :testing {
+      :env {
+        :log-level :info}}})

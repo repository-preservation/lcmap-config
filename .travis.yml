@@ -1,0 +1,14 @@
+language: clojure
+before_script: test/support/setup_deps.sh
+script:
+  - make check
+jdk:
+  - oraclejdk8
+  #- oraclejdk7
+  #- openjdk6
+  - openjdk7
+  #- openjdk8
+#addons:
+#  apt:
+#    sources:
+#      -
