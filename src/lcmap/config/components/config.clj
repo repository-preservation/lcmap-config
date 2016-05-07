@@ -7,26 +7,18 @@
   lcmap.config.components.config
   (:require [clojure.tools.logging :as log]
             [com.stuartsierra.component :as component]
-            [lcmap.config :as config]))
+            [lcmap.config.helpers :as config-help]))
 
-(defrecord Configuration []
+(defrecord Configuration [cfg-opts]
   component/Lifecycle
-
   (start [component]
-    (log/info "Setting up LCMAP configuration ...")
-    (let [cfg (config/get-updated-config)
-          auth-backend (get-in cfg [:env :auth :backend])
-          auth-cfg (get-in cfg [:env :auth auth-backend])]
-      (log/info "Using lein profile:" (get-in cfg [:env :active-profile]))
-      (log/infof "Will connect to the %s authentication endpoint ..."
-                 (:endpoint auth-cfg))
-      (log/debug "Successfully generated LCMAP configuration.")
-      cfg))
-
+    (log/info "Starting configuration component ...")
+    (let [cfg-map (config-help/init-cfg cfg-opts)]
+      (log/debug cfg-map)
+      (merge component cfg-map)))
   (stop [component]
-    (log/info "Tearing down LCMAP configuration ...")
-    (log/debug "Component keys" (keys component))
-    (assoc component :cfg nil)))
+    (log/info "Stopping configuration component ...")))
 
-(defn new-configuration []
-  (->Configuration))
+(defn new-configuration [cfg-opts]
+  (log/debug "Building configuration component ...")
+  (->Configuration cfg-opts))

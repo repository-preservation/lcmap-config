@@ -1,11 +1,14 @@
 (ns ^{:doc
-  "LCMAP REST configuration"}
+  "LCMAP configuration config"}
   lcmap.config
   (:require [clojure.core.memoize :as memo]
             [clojure.string :as string]
             [clojure.tools.logging :as log]
             [leiningen.core.project :as lein-prj]
-            [lcmap.client.config]))
+            [lcmap.client.config]
+            [schema.core :as schema]))
+
+;;; Previous functions....
 
 (def env-prefix "LCMAP_SERVER")
 
