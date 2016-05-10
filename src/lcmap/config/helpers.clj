@@ -1,12 +1,25 @@
 (ns lcmap.config.helpers
   ""
-  (:require [clojure-ini.core :as ini]
-            [clojure.edn :as edn]
+  (:require [clojure.edn :as edn]
+            [clojure.java.io :as io]
             [clojure.tools.cli :as cli]
+            [clojure-ini.core :as ini]
             [camel-snake-kebab.core :refer [->kebab-case-keyword]]
             [camel-snake-kebab.extras :refer [transform-keys]]
             [schema.core :as schema]
             [schema.coerce :as coerce]))
+
+;;; Rebindable vars referencing LCMAP configuration files.
+
+(def ^:dynamic *lcmap-config-dir*
+  (io/file (System/getProperty "user.home") ".usgs"))
+
+(def ^:dynamic *lcmap-config-ini*
+  (io/file *lcmap-config-dir* "lcmap.ini"))
+
+(def ^:dynamic *lcmap-config-edn*
+  (io/file *lcmap-config-dir* "lcmap.edn"))
+
 
 ;;; Configuration source to cfg-map functions
 
