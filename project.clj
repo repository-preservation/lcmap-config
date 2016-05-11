@@ -8,8 +8,6 @@
                  ;; Componentization
                  [com.stuartsierra/component "0.3.0"]
                  [twig "0.1.6"]
-                 ;; XXX circular dependency??
-                 ;; [gov.usgs.eros/lcmap-client-clj "0.5.0-SNAPSHOT"]
                  ;; XXX note that we may still need to explicitly include the
                  ;; Apache Java HTTP client, since the version used by the LCMAP
                  ;; client is more recent than that used by Chas Emerick's
