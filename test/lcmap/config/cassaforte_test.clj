@@ -1,7 +1,5 @@
 (ns lcmap.config.cassaforte-test
-  (:require [clojure.test :refer :all]
-            [lcmap.data.shared-test :as shared]
-            [lcmap.data.components.database :refer :all]))
+  (:require [clojure.test :refer :all]))
 
 (deftest db-config-test
   (testing "hosts"
