@@ -38,5 +38,6 @@ db-pass = cassandra
 job-namespace = lcmap
 job-table = jobs
 
-[lcmap.config]
-log-level = debug
+[lcmap.logging]
+level = debug
+namespaces = lcmap.*
