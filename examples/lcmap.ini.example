@@ -24,8 +24,8 @@ default-exchange-name = lcmap.event
 default-queue-name = lcmap.event-stream
 
 [lcmap.rest]
-http-ip = localhost
-http-port = 1077
+ip = localhost
+port = 1077
 auth-backend = usgs
 auth-endpoint = http://localhost:8888/api
 auth-login-resource = /login
