@@ -40,4 +40,4 @@ job-table = jobs
 
 [lcmap.logging]
 level = debug
-namespaces = lcmap.*
+namespaces = lcmap.rest,lcmap.config,lcmap.event,lcmap.data,lcmap.event
