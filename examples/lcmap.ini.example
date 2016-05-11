@@ -28,7 +28,7 @@ ip = localhost
 port = 1077
 auth-backend = usgs
 auth-endpoint = http://localhost:8888/api
-auth-login-resource = /login
+auth-login-resource = /auth
 auth-user-resource = /me
 
 [lcmap.see]
