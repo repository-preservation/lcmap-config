@@ -35,8 +35,8 @@ auth-user-resource = /me
 db-hosts = localhost
 db-user = cassandra
 db-pass = cassandra
-job-namespace = lcmap
-job-table = jobs
+job-keyspace = lcmap
+job-table = job
 
 [lcmap.logging]
 level = debug
