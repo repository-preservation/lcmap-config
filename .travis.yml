@@ -1,6 +1,7 @@
 language: clojure
 before_script: test/support/setup_deps.sh
 script:
+  - source test/conf/test.env
   - make check
 jdk:
   - oraclejdk8
