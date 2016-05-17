@@ -1,7 +1,6 @@
 language: clojure
 before_script: test/support/setup_deps.sh
-script:
-  - make check
+script: make check
 jdk:
   - oraclejdk8
   #- oraclejdk7
@@ -14,8 +13,8 @@ jdk:
 #      -
 notifications:
   email:
-      # the following won't work until the Travis
-      # but here is sorted:
+      # the following won't work until this Travis CI
+      # bug is sorted:
       # https://github.com/travis-ci/travis-ci/issues/2513
       - lcmap-dev-notifications@googlegroups.com
       - duncan.mcgreggor.ctr@usgs.gov
