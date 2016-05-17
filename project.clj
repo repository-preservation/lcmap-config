@@ -23,13 +23,19 @@
                  [camel-snake-kebab "0.4.0"]
                  [prismatic/schema "1.1.0"]
                  [clj-http "2.0.0"]
+                 [environ "1.0.3"]
                  ;; Data types, encoding, validation, etc.
                  [leiningen-core "2.5.3"]]
   :plugins [[lein-ring "0.9.7"]
             [lein-pprint "1.1.1"]
             [lein-codox "0.9.1"]
-            [lein-simpleton "1.3.0"]]
+            [lein-simpleton "1.3.0"]
+            [lein-environ "1.0.3"]]
   :profiles {
-    :testing {
+    :test {
+      :jvm-opts ["-DFOO=env-test-foo-val"
+                 "-DBAR=env-test-bar-val"
+                 "-DBAZ=env-test-baz-val"]
       :env {
-        :log-level :info}}})
+        :log-level :info
+        :clj-env :test}}})
