@@ -1,4 +1,0 @@
-{:dev
- {:foo "edn-dev-foo-val"}
- :test
- {:foo "edn-test-foo-val"}}
