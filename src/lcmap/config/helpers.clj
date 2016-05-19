@@ -76,7 +76,6 @@
 (def config-coercers (coerce/first-matcher [string->numeric
                                             string->strings]))
 
-
 (def Config
   "A schema for config maps"
   {schema/Keyword schema/Str})
