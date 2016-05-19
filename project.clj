@@ -31,7 +31,16 @@
             [lein-codox "0.9.1"]
             [lein-simpleton "1.3.0"]
             [lein-environ "1.0.3"]]
+  :repl-options {:init-ns lcmap.config.dev}
+  :main lcmap.config.app
   :profiles {
+    :dev {
+      :dependencies [[org.clojure/tools.namespace "0.2.11"]
+                     [slamhound "1.5.5"]]
+      :aliases {"slamhound" ["run" "-m" "slam.hound"]}
+      :source-paths ["dev-resources/src"]
+      :plugins [[lein-kibit "0.1.2"]
+                [jonase/eastwood "0.2.3"]]}
     :test {
       :jvm-opts ["-DFOO=env-test-foo-val"
                  "-DBAR=env-test-bar-val"

@@ -35,16 +35,16 @@
 
    * https://github.com/stuartsierra/component
    * https://www.youtube.com/watch?v=13cmHf_kt-Q"}
-  ;; XXX I think a rename was missed?
   lcmap.config.components
   (:require [clojure.tools.logging :as log]
             [com.stuartsierra.component :as component]
+            [lcmap.config]
             [lcmap.config.components.config :as config]
             [lcmap.config.components.system :as system]))
 
-(defn init [app]
+(defn init []
   (component/system-map
-    :cfg (config/new-configuration)
+    :cfg (config/new-configuration lcmap.config/defaults)
     :sys (component/using
            (system/new-lcmap-toplevel)
            [:cfg])))
