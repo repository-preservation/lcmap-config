@@ -11,11 +11,13 @@
 
 (defrecord Configuration [cfg-opts]
   component/Lifecycle
+
   (start [component]
     (log/info "Starting configuration component ...")
     (let [cfg-map (config-help/init-cfg cfg-opts)]
-      (log/debug cfg-map)
+      (log/debug "Configuration data:" cfg-map)
       (merge component cfg-map)))
+
   (stop [component]
     (log/info "Stopping configuration component ...")))
 
