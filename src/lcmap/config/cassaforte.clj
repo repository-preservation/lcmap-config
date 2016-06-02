@@ -1,7 +1,6 @@
-(ns ^{:doc
+(ns lcmap.config.cassaforte
   "Utility functions for configuring components that connect to
-  a Cassandra cluster using Cassaforte."}
-  lcmap.config.cassaforte)
+  a Cassandra cluster using Cassaforte.")
 
 (defn connect-opts
   "Build connect options from db-conf. Only sets credentials and basic parameters.

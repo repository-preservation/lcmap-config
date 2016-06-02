@@ -1,9 +1,8 @@
-(ns ^{:doc
+(ns lcmap.config.components.system
   "Top-level LCMAP REST Service system component
 
   For more information, see the module-level code comments in
-  ``lcmap.rest.components``."}
-  lcmap.config.components.system
+  ``lcmap.rest.components``."
   (:require [clojure.tools.logging :as log]
             [com.stuartsierra.component :as component]))
 

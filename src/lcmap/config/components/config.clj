@@ -1,10 +1,4 @@
-(ns ^{:doc
-  "Config component of the LCMAP configuration system
-
-  For more information, see the module-level code comments in
-  ``lcmap.config.components`` and ``lcmap.*.components`` in other LCMAP
-  projects."}
-  lcmap.config.components.config
+(ns lcmap.config.components.config
   (:require [clojure.tools.logging :as log]
             [com.stuartsierra.component :as component]
             [lcmap.config.helpers :as config-help]))

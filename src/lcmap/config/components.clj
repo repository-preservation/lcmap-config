@@ -1,4 +1,4 @@
-(ns ^{:doc
+(ns lcmap.config.components
   "LCMAP REST configuration components
 
   Large applications often consist of many stateful processes which must be
@@ -34,8 +34,7 @@
   For more information on the Clojure component library, see:
 
    * https://github.com/stuartsierra/component
-   * https://www.youtube.com/watch?v=13cmHf_kt-Q"}
-  lcmap.config.components
+   * https://www.youtube.com/watch?v=13cmHf_kt-Q"
   (:require [clojure.tools.logging :as log]
             [com.stuartsierra.component :as component]
             [lcmap.config]
@@ -65,4 +64,3 @@
   (-> system
       (stop component-key)
       (start component-key)))
-

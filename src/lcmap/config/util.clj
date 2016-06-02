@@ -1,4 +1,5 @@
 (ns lcmap.config.util
+  "General convenience functions"
   (:require [clojure.core.memoize :as memo]
             [clojure.string :as string]
             [clojure.tools.logging :as log]))

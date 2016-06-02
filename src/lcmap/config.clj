@@ -1,6 +1,5 @@
-(ns ^{:doc
-      "LCMAP configuration config"}
-  lcmap.config
+(ns lcmap.config
+  "LCMAP configuration config"
   (:require [lcmap.config.helpers :as helpers]
             [schema.core :as schema]))
 

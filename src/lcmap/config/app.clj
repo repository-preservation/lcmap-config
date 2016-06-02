@@ -3,8 +3,7 @@
             [com.stuartsierra.component :as component]
             [twig.core :as logger]
             [lcmap.config.components :as components]
-            [lcmap.config.util :as util])
-  (:gen-class))
+            [lcmap.config.util :as util]))
 
 (defn -main
   "This is the entry point. Note, however, that the system components are
