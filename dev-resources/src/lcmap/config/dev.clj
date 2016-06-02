@@ -86,9 +86,9 @@
 
 (defn -refresh
   ([]
-    (repl/refresh))
+    (repl/refresh-all))
   ([& args]
-    (apply #'repl/refresh args)))
+    (apply #'repl/refresh-all args)))
 
 (defn refresh [& args]
   "This is essentially an alias for clojure.tools.namespace.repl/refresh."
