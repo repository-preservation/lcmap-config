@@ -8,7 +8,7 @@
 
 * [About](#about-)
 * [Usage](#usage-)
-  * [Dependencies](#dependencies-)
+  * [project.clj Dependency](#projectclj-dependency-)
   * [Defining a Config Schema](#defining-a-config-schema-)
   * [Configuration File](#configuration-file-)
   * [Components & Configuration](#components--configuration-)
