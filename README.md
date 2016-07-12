@@ -1,4 +1,8 @@
-# LCMAP Configuration
+# lcmap.config
+
+*Unified Configuration for the LCMAP System of Systems*
+
+
 [![Build Status][travis-badge]][travis][![Dependencies Status][deps-badge]][deps][![Clojars Project][clojars-badge]][clojars]
 
 [![LCMAP open source project logo][lcmap-logo]][lcmap-logo-large]
