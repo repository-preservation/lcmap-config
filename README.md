@@ -3,15 +3,22 @@
 
 [![LCMAP open source project logo][lcmap-logo]][lcmap-logo-large]
 
+
 #### Contents
 
 * [About](#about-)
 * [Usage](#usage-)
+  * [Dependencies](#dependencies-)
+  * [Defining a Config Schema](#defining-a-config-schema-)
+  * [Configuration File](#configuration-file-)
+  * [Components & Configuration](#components--configuration-)
 * [License](#usage-)
+
 
 ## About [&#x219F;](#contents)
 
 This project provides helpers to parse, coerce, and validate values from a variety of sources (INI, EDN, CLI, ENV). It also supplies configuration component in order to make it easy to supply other components with configuration values..
+
 
 ## Usage [&#x219F;](#contents)
 
@@ -22,17 +29,19 @@ In order to use lcmap-config you need to:
 3. Add keys/values to lcmap.ini
 4. Update your components
 
-### Dependency
+
+### Dependencies [&#x219F;](#contents)
 
 ```
 [lcmap-config 0.5.0-SNAPSHOT]
 ```
 
-### Define a Schema
+
+### Defining a Config Schema [&#x219F;](#contents)
 
 For example:
 
-```
+```clj
 (ns lcmap.project.config)
 
 (def cfg-schema
@@ -44,30 +53,34 @@ For example:
    :schema cfg-schema})
 ```
 
-### Update lcmap.ini
 
-By default LCMAP projects read configuration from $HOME/.usgs/lcmap.ini
+### Configuration File [&#x219F;](#contents)
 
-The convention is to create a section based on the project's namespace. For example, the lcmap-data project expects a section called lcmap.data
+By default LCMAP projects read configuration from `$HOME/.usgs/lcmap.ini`.
 
+The convention is to create a section based on the project's namespace. For example, the lcmap-data project expects a section called `lcmap.data`:
+
+```ini
 [lcmap.data]
 db-hosts=host1, host2, host3
+```
 
-## Update components
+### Components & Configuration [&#x219F;](#contents)
 
 LCMAP projects expect the configuration component to be associated with a key of `:cfg` in the system map.
 
-```
+```clj
 (component/system-map
-#_...
+  ...
   :cfg (component/using
          (config/new-configuration opts)
           []))
-#_...
+  ...)
 ```
 
 
-Use the first and second level namespace ... wording ... e.g. lcmap.data, lcmap.rest, lcmap.client, etc...
+Use the first and second level namespace ... wording ... e.g. `lcmap.data`, `lcmap.rest`, `lcmap.client`, etc.
+
 
 # License [&#x219F;](#contents)
 
