@@ -27,7 +27,7 @@ default-queue-name = lcmap.event-stream
 ip = localhost
 port = 1077
 auth-backend = usgs
-auth-endpoint = http://localhost:8888/api
+auth-endpoint = http://localhost:9999/api
 auth-login-resource = /auth
 auth-user-resource = /me
 
