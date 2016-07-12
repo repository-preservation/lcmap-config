@@ -30,7 +30,7 @@ In order to use lcmap-config you need to:
 4. Update your components
 
 
-### Dependencies [&#x219F;](#contents)
+### ``project.clj`` Dependency [&#x219F;](#contents)
 
 ```
 [lcmap-config 0.5.0-SNAPSHOT]
