@@ -12,7 +12,7 @@
   * [Defining a Config Schema](#defining-a-config-schema-)
   * [Configuration File](#configuration-file-)
   * [Components & Configuration](#components--configuration-)
-* [License](#usage-)
+* [License](#license-)
 
 
 ## About [&#x219F;](#contents)
