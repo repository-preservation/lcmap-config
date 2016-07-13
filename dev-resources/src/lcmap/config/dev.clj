@@ -16,7 +16,7 @@
             [clojure.tools.namespace.repl :as repl]
             [clojure.walk :refer [macroexpand-all]]
             [com.stuartsierra.component :as component]
-            [twig.core :as logger]
+            [clojusc.twig :as logger]
             ;; api
             [lcmap.config.components :as components]
             [lcmap.config.util :as util]))

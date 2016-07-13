@@ -2,7 +2,7 @@
   ""
   (:require [clojure.tools.logging :as log]
             [com.stuartsierra.component :as component]
-            [twig.core :as logger]
+            [clojusc.twig :as logger]
             [lcmap.config.components :as components]
             [lcmap.config.util :as util]))
 
