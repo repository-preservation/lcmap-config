@@ -33,13 +33,16 @@
             [lein-environ "1.0.3"]]
   :repl-options {:init-ns lcmap.config.dev}
   :main lcmap.config.app
-  :codox {:project {:name "lcmap.config"
-                    :description "LCMAP Configuration Library"}
-          :namespaces [#"^lcmap.config\."]
-          :output-path "docs/master/current"
-          :doc-paths ["docs/source"]
-          :metadata {:doc/format :markdown
-                     :doc "Documentation forthcoming"}}
+  :codox {
+    :project {
+      :name "lcmap.config"
+      :description "LCMAP Configuration Library"}
+    :namespaces [#"^lcmap.config\."]
+    :output-path "docs/master/current"
+    :doc-paths ["docs/source"]
+    :metadata {
+      :doc/format :markdown
+      :doc "Documentation forthcoming"}}
   :profiles {
     :dev {
       :dependencies [[org.clojure/tools.namespace "0.3.0-alpha3"]
