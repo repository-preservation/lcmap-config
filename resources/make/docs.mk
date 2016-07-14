@@ -1,5 +1,5 @@
 DOCS_DIR = $(ROOT_DIR)/docs
-REPO = $(shell git config --get remote.origin.url)
+DOCS_REPO = $(shell git config --get remote.origin.url)
 DOCS_BUILD_DIR = $(DOCS_DIR)/build
 DOCS_PROD_DIR = $(DOCS_DIR)/master
 CURRENT = $(DOCS_PROD_DIR)/current
@@ -45,5 +45,5 @@ teardown-temp-repo:
 
 publish-docs: prod-docs setup-temp-repo
 	@echo "\nPublishing docs ...\n"
-	@cd $(DOCS_PROD_DIR) && git push -f $(REPO) master:gh-pages
+	@cd $(DOCS_PROD_DIR) && git push -f $(DOCS_REPO) master:gh-pages
 	@make teardown-temp-repo
