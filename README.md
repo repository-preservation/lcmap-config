@@ -11,6 +11,7 @@
 #### Contents
 
 * [About](#about-)
+* [Documentation](#documentation-)
 * [Usage](#usage-)
   * [project.clj Dependency](#projectclj-dependency-)
   * [Defining a Config Schema](#defining-a-config-schema-)
@@ -22,6 +23,14 @@
 ## About [&#x219F;](#contents)
 
 This project provides helpers to parse, coerce, and validate values from a variety of sources (INI, EDN, CLI, ENV). It also supplies configuration component in order to make it easy to supply other components with configuration values..
+
+
+## Documentation [&#x219F;](#contents)
+
+The LCMAP configuration system API reference is slowly being updated with
+docstrings.  The project's auto-generated documentation is available here:
+
+* [http://usgs-eros.github.io/lcmap-event](http://usgs-eros.github.io/lcmap-event)
 
 
 ## Usage [&#x219F;](#contents)
