@@ -1,4 +1,4 @@
-(defproject gov.usgs.eros/lcmap-config "0.5.0-SNAPSHOT"
+(defproject gov.usgs.eros/lcmap-config "0.5.0"
   :description "LCMAP Configuration Library"
   :url "https://github.com/USGS-EROS/lcmap-config"
   :license {:name "NASA Open Source Agreement, Version 1.3"
