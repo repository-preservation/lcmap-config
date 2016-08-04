@@ -21,16 +21,16 @@
                  [org.clojure/tools.cli "0.3.5"]
                  ;; Configuration transformation
                  [camel-snake-kebab "0.4.0"]
-                 [prismatic/schema "1.1.2"]
+                 [prismatic/schema "1.1.3"]
                  [clj-http "3.1.0"]
-                 [environ "1.0.3"]
+                 [environ "1.1.0"]
                  ;; Data types, encoding, validation, etc.
                  [leiningen-core "2.6.1"]]
   :plugins [[lein-ring "0.9.7"]
             [lein-pprint "1.1.2"]
             [lein-codox "0.9.5"]
             [lein-simpleton "1.3.0"]
-            [lein-environ "1.0.3"]]
+            [lein-environ "1.1.0"]]
   :repl-options {:init-ns lcmap.config.dev}
   :main lcmap.config.app
   :codox {
