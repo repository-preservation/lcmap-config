@@ -44,6 +44,7 @@
       :doc/format :markdown
       :doc "Documentation forthcoming"}}
   :profiles {
+    :uberjar {:aot :all}
     :dev {
       :dependencies [[org.clojure/tools.namespace "0.3.0-alpha3"]
                      [slamhound "1.5.5"]]
