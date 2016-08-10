@@ -4,4 +4,4 @@ checkouts
 .nrepl*
 *.*~
 docs/master/current
-pom.xml
+pom.xml*
