@@ -7,7 +7,7 @@
                  [org.clojure/core.memoize "0.5.9"]
                  ;; Componentization
                  [com.stuartsierra/component "0.3.1"]
-                 [clojusc/twig "0.2.1"]
+                 [clojusc/twig "0.2.3"]
                  ;; XXX note that we may still need to explicitly include the
                  ;; Apache Java HTTP client, since the version used by the LCMAP
                  ;; client is more recent than that used by Chas Emerick's
