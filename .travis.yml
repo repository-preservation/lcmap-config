@@ -1,6 +1,11 @@
-language: clojure
+# We can't use Clojure due to a premature call to lein prior to the
+# before_install step by Travis CI. Calling lein before we've installed to the
+# local Maven repo causes an error with lein-parent and Sonatype.
+#language: clojure
+language: java
 install: test/support/travis_install.sh
-before_script: test/support/setup_deps.sh
+after_install: test/support/setup_deps.sh
+before_script: lein version && lein deps && lein compile
 script: make check
 jdk:
   - oraclejdk8
