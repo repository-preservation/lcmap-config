@@ -1,4 +1,5 @@
 language: clojure
+before_install: test/support/setup_env.sh
 before_script: test/support/setup_deps.sh
 script: make check
 jdk:
