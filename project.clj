@@ -2,9 +2,12 @@
   :parent-project {
     :coords [gov.usgs.eros/lcmap-system "1.0.0-SNAPSHOT"]
     :inherit [
+      :deploy-repositories
       :license
       :managed-dependencies
       :plugins
+      :pom-addition
+      :repositories
       ;; XXX The following can be un-commented once this issue is resolved:
       ;;     * https://github.com/achin/lein-parent/issues/3
       ;; [:profiles [:uberjar :dev]]
