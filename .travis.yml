@@ -1,5 +1,5 @@
 language: clojure
-before_install: test/support/setup_env.sh
+install: test/support/travis_install.sh
 before_script: test/support/setup_deps.sh
 script: make check
 jdk:
