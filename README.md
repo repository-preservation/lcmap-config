@@ -1,6 +1,6 @@
 # lcmap.config
 
-[![Build Status][travis-badge]][travis][![Dependencies Status][deps-badge]][deps][![Clojars Project][clojars-badge]][clojars]
+[![Build Status][travis-badge]][travis][![Clojars Project][clojars-badge]][clojars]
 
 *Unified Configuration for the LCMAP System of Systems*
 
