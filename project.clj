@@ -8,6 +8,7 @@
       :plugins
       :pom-addition
       :repositories
+      :target
       ;; XXX The following can be un-commented once this issue is resolved:
       ;;     * https://github.com/achin/lein-parent/issues/3
       ;; [:profiles [:uberjar :dev]]
@@ -41,7 +42,7 @@
       :doc/format :markdown
       :doc "Documentation forthcoming"}}
   :profiles {
-    ;; XXX The :uberjar and :dev profiles can be removed once this issue is 
+    ;; XXX The :uberjar and :dev profiles can be removed once this issue is
     ;;     resolved:
     ;;     * https://github.com/achin/lein-parent/issues/3
     :uberjar {:aot :all}
