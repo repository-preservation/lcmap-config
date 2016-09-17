@@ -19,6 +19,8 @@ scene-table = tile_scenes
 [lcmap.event]
 host = localhost
 port = 5672
+user = user
+pass = pass
 vhost = /lcmap
 default-exchange-name = lcmap.event
 default-queue-name = lcmap.event-stream
